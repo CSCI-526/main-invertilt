@@ -6,18 +6,11 @@ using TMPro; // For Text Mesh pro
 public class ScenarioSpin : MonoBehaviour
 {
     private float rotationAngle = 45f;
-    private float rotationDuration = 0.5f;
+    public float rotationDuration = 0.8f;
     private bool isRotating = false;
     private bool canMove = true;
 
-
-    public int maxRotations = 5;
-    public int maxGravityFlips = 3;
-    public int remainingRotations;
-    public int remainingGravityFlips;
-    // Moves Counter
-    public int maxMoves = 8; // Total moves for both rotations and gravity flips
-    public int movesLeft;
+    public int movesLeft = 8;
 
     // Text Reference
     public TMP_Text movesCounterText;
@@ -27,7 +20,6 @@ public class ScenarioSpin : MonoBehaviour
 
     void Start()
     {
-        movesLeft = maxMoves;
         UpdateUI();
     }
 
@@ -38,6 +30,7 @@ public class ScenarioSpin : MonoBehaviour
             return;
         }
 
+        // The scenario cannot move if the it is rotating
         if (Input.GetKeyDown(KeyCode.A) && !isRotating && movesLeft > 0)
         {
             StartCoroutine(SmoothRotate(rotationAngle));
@@ -62,11 +55,14 @@ public class ScenarioSpin : MonoBehaviour
 
     IEnumerator SmoothRotate(float angle)
     {
+        // This code spin around the 0, 0 point.
+        // FIXME: We may need to do some change for different level, if we only want to rotate one platform.
         isRotating = true;
         float elapsedTime = 0f;
         Quaternion startRotation = transform.rotation;
         Quaternion endRotation = Quaternion.Euler(0, 0, transform.eulerAngles.z + angle);
 
+        // Animate the rotation
         while (elapsedTime < rotationDuration)
         {
             transform.rotation = Quaternion.Lerp(startRotation, endRotation, elapsedTime / rotationDuration);
@@ -76,6 +72,7 @@ public class ScenarioSpin : MonoBehaviour
 
         transform.rotation = endRotation;
         isRotating = false;
+
     }
 
     void UpdateUI()

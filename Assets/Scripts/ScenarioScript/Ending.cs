@@ -23,8 +23,6 @@ public class Ending : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collision)
     {
 
-        // Debug.Log("Ending OnTriggerEnter2D");
-
         if (isEnding)
         {
             return;

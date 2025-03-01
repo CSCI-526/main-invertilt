@@ -30,7 +30,7 @@ public class BouncyBall : MonoBehaviour
     void Update()
     {
         // Only allow gravity flip if there are flips remaining
-        if (scenarioSpin != null && scenarioSpin.remainingGravityFlips > 0)
+        if (scenarioSpin != null)
         {
             // Press G key to toggle gravity direction
             if (Input.GetKeyDown(KeyCode.G))
