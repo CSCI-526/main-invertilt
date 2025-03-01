@@ -58,6 +58,7 @@ ExportedObj/
 .vs/
 *.suo
 *.sln
+.vsconfig
 
 # Rider
 .idea/
