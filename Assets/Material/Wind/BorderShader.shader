@@ -2,7 +2,7 @@ Shader "Custom/BorderShader"
 {
     Properties
     {
-        _Color("Color", Color) = (1,1,1,1)
+        _Color("Color", Color) = (1,1,1,0.4)
         _BorderThickness("Border Thickness", Range(0, 1)) = 0.1
     }
     SubShader
