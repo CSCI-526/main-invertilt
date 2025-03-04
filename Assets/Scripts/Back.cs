@@ -7,6 +7,6 @@ public class Back : MonoBehaviour
 {
     public void LoadBack()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("Levels");
     }
 }
