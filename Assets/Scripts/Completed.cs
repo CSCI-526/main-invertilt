@@ -5,6 +5,6 @@ public class Completed : MonoBehaviour
 {
     public void LoadLevelsScene()
     {
-        SceneManager.LoadScene("DemoScene");
+        SceneManager.LoadScene("Levels");
     }
 }

@@ -7,14 +7,13 @@ public class MainMenu : MonoBehaviour
 {
 
     public void Playgame(){
-        SceneManager.LoadSceneAsync("Level-1");
+        SceneManager.LoadSceneAsync("Levels");
     }
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         
