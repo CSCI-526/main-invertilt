@@ -737,8 +737,6 @@ GameObject:
   - component: {fileID: 474587071}
   - component: {fileID: 474587070}
   - component: {fileID: 474587067}
-  - component: {fileID: 474587069}
-  - component: {fileID: 474587068}
   m_Layer: 5
   m_Name: MovesCounterText
   m_TagString: Untagged
@@ -835,33 +833,6 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &474587068
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 474587066}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56a9a1b848adf5e4caee2d4b54963ad5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &474587069
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 474587066}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc527183ca96f4b0587f8d480a53c234, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotationDuration: 0.5
-  movesLeft: 0
-  movesCounterText: {fileID: 474587067}
 --- !u!222 &474587070
 CanvasRenderer:
   m_ObjectHideFlags: 0
