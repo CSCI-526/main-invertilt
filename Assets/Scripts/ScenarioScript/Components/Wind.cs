@@ -9,16 +9,16 @@ public class Wind : MonoBehaviour
 
     public new ParticleSystem particleSystem;
     private Vector3 windSize;
-    private Vector3 windPosition;
 
-    public Vector2 windDirection = new Vector2(1.0f, 0.0f);
+    private Vector2 windDirection;
     public float windForce = 10.0f;
+
     // Start is called before the first frame update
     void Start()
     {
-
+        // get wind block direction and size
+        windDirection = transform.up;
         windSize = transform.childCount > 0 ? transform.GetChild(0).localScale : Vector3.one;
-        windPosition = transform.position;
 
         if (particleSystem == null)
         {
@@ -38,8 +38,6 @@ public class Wind : MonoBehaviour
         destroyParticle();
     }
 
-
-
     void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.tag != "Player")
@@ -51,7 +49,7 @@ public class Wind : MonoBehaviour
         {
             return;
         }
-
+        
         collision.attachedRigidbody.AddForce(windDirection * windForce);
     }
 
