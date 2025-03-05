@@ -30,7 +30,7 @@ public class LevelSelector : MonoBehaviour
         }
         else
         {
-            SceneManager.LoadScene("DemoScene");
+            SceneManager.LoadScene("Level-4");
         }
     }
 
