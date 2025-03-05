@@ -22,7 +22,7 @@ public class LevelSelector : MonoBehaviour
         }
         else if (level == 2)
         {
-            SceneManager.LoadScene("Level-1");
+            SceneManager.LoadScene("Level-2");
         }
         else if (level == 3)
         {
