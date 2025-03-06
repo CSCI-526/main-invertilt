@@ -47,7 +47,7 @@ public class WindParticleSystem : MonoBehaviour
         // start speed
         var main = particleSystem.main;
         // main.startSpeed = windForce / 3.0f;
-        main.startSpeed = (ParticleSystem.MinMaxCurve)(Math.Log(Wind.windForce) * 2.0f);
+        main.startSpeed = (ParticleSystem.MinMaxCurve)(Math.Log(Wind.WindForce) * 2.0f);
     }
 
     // destroy the particle out of the wind area
