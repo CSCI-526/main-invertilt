@@ -2759,7 +2759,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7052518248676140053, guid: 63f1b78c6b5384145809488fe7c06cff, type: 3}
       propertyPath: windForce
-      value: 10
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 7158732780433262629, guid: 63f1b78c6b5384145809488fe7c06cff, type: 3}
       propertyPath: m_LocalPosition.x
