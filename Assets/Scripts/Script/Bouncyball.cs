@@ -33,7 +33,7 @@ public class BouncyBall : MonoBehaviour
         if (scenarioSpin != null)
         {
             // Press G key to toggle gravity direction
-            if (Input.GetKeyDown(KeyCode.G))
+            if (Input.GetKeyDown(KeyCode.G) && scenarioSpin.movesLeft > 0)
             {
                 gravityReversed = !gravityReversed;
 
