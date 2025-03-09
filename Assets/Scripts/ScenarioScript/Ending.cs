@@ -21,6 +21,9 @@ public class Ending : MonoBehaviour
         {
             scenarioSpin.DisableRotation();
         }
+        string currentLevel = SceneManager.GetActiveScene().name;
+        PlayerPrefs.SetString("CurrentLevel", currentLevel);
+        PlayerPrefs.Save();
 
         SceneManager.LoadScene("Completed");
     }
