@@ -1415,8 +1415,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 9.0727, y: -0.00000095367}
-  m_SizeDelta: {x: 38.2373, y: 5.56}
+  m_AnchoredPosition: {x: -0.0000019073, y: 0.0799}
+  m_SizeDelta: {x: 19.5, y: 5.4002}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &962033136
 MonoBehaviour:
@@ -1438,7 +1438,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Navigate strategically around the "Windbox".
+  m_text: Navigate strategically around the "Windbox"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1501,7 +1501,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 18.257627, w: 0}
+  m_margin: {x: 0, y: 0, z: 0.04526044, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2053,8 +2053,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -24.5, y: -51.6}
-  m_SizeDelta: {x: 100, y: 20}
+  m_AnchoredPosition: {x: -6.9, y: -48.1}
+  m_SizeDelta: {x: 89.4149, y: 12.204}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1174685436
 MonoBehaviour:
@@ -2125,7 +2125,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 4
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -3001,7 +3001,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 25
+  orthographic size: 28.1758
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2

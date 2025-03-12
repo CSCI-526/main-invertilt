@@ -687,7 +687,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 25
+  orthographic size: 28.1758
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -798,7 +798,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 4
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -857,8 +857,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -24.5, y: -51.6}
-  m_SizeDelta: {x: 100, y: 20}
+  m_AnchoredPosition: {x: -6.9, y: -48.1}
+  m_SizeDelta: {x: 89.4149, y: 12.204}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &533331532
 GameObject:
