@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement; // Add this
 public class Ending : MonoBehaviour
 {
     private bool isEnding = false;
+    private int level;
+    private string levelName;
 
     void OnTriggerEnter2D(Collider2D collision)
     {
@@ -24,7 +26,26 @@ public class Ending : MonoBehaviour
         string currentLevel = SceneManager.GetActiveScene().name;
         PlayerPrefs.SetString("CurrentLevel", currentLevel);
         PlayerPrefs.Save();
+        
+        levelName = SceneManager.GetActiveScene().name;
+        switch(levelName)
+        {
+            case "Level-1":
+                level = 1;
+                break;
+            case "Level-2":
+                level = 2;
+                break;
+            case "Level-3":
+                level = 3;
+                break;
+            case "Level-4":
+                level = 4;
+                break;
+        }
 
+        Debug.Log("Level "+ level + " completed.");
+        GameAnalytics.Instance.LevelCompleted(level);
         SceneManager.LoadScene("Completed");
     }
 }

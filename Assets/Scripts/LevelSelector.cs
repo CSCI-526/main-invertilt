@@ -18,18 +18,22 @@ public class LevelSelector : MonoBehaviour
     {
         if (level == 1)
         {
+            GameAnalytics.Instance.LevelStarted(1);
             SceneManager.LoadScene("Level-1");
         }
         else if (level == 2)
         {
+            GameAnalytics.Instance.LevelStarted(2);
             SceneManager.LoadScene("Level-2");
         }
         else if (level == 3)
         {
+            GameAnalytics.Instance.LevelStarted(3);
             SceneManager.LoadScene("Level-3");
         }
         else
         {
+            GameAnalytics.Instance.LevelStarted(4);
             SceneManager.LoadScene("Level-4");
         }
     }
