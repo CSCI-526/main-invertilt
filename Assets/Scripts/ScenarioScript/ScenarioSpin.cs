@@ -30,7 +30,7 @@ public class ScenarioSpin : MonoBehaviour
             return;
         }
 
-        // The scenario cannot move if the it is rotating
+        // The scenario cannot move if it is rotating
         if (Input.GetKeyDown(KeyCode.A) && !isRotating && movesLeft > 0)
         {
             StartCoroutine(SmoothRotate(rotationAngle));
@@ -44,12 +44,15 @@ public class ScenarioSpin : MonoBehaviour
             UpdateUI();
         }
 
-        if (Input.GetKeyDown(KeyCode.G) && movesLeft > 0)
+        if (Input.GetKeyDown(KeyCode.G))
         {
-            Physics2D.gravity = isGravityFlipped ? new Vector2(0, -9.81f) : new Vector2(0, 9.81f);
-            isGravityFlipped = !isGravityFlipped;
-            movesLeft--;
-            UpdateUI();
+            if (movesLeft > 0)  // Ensure movesLeft must be positive before allowing gravity flip
+            {
+                Physics2D.gravity = isGravityFlipped ? new Vector2(0, -9.81f) : new Vector2(0, 9.81f);
+                isGravityFlipped = !isGravityFlipped;
+                movesLeft--;
+                UpdateUI();
+            }
         }
     }
 
