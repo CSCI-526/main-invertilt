@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using TMPro;  // Add this
+using TMPro;
 
 public class LevelSelector : MonoBehaviour
 {
@@ -31,10 +31,15 @@ public class LevelSelector : MonoBehaviour
             GameAnalytics.Instance.LevelStarted(3);
             SceneManager.LoadScene("Level-3");
         }
-        else
+        else if (level == 4)
         {
             GameAnalytics.Instance.LevelStarted(4);
             SceneManager.LoadScene("Level-4");
+        }
+        else if (level == 5)
+        {
+            GameAnalytics.Instance.LevelStarted(5);
+            SceneManager.LoadScene("Level-5");
         }
     }
 
