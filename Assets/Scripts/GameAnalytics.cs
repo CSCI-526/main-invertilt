@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
+
 public class GameAnalytics : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -47,15 +48,24 @@ public class GameAnalytics : MonoBehaviour
     public void LevelCompleted(int level)
     {
         Debug.Log($"Level {level} completed in {levelAttempts[level]} attempts.");
+
+        FirebaseManager.Instance.SendAnalyticsData(sessionID, highestLevelReached, levelAttempts);
     }
 
     public void EndSession()
     {
         Debug.Log($"Session {sessionID} ended. Highest Level Reached: {highestLevelReached}");
-        foreach (var entry in levelAttempts)
-        {
-            Debug.Log($"Level {entry.Key}: {entry.Value} attempts.");
-        }
-        // Here you would send data to a server or save it locally
+        // foreach (var entry in levelAttempts)
+        // {
+        //     Debug.Log($"Level {entry.Key}: {entry.Value} attempts.");
+        // }
+    }
+
+
+    void OnApplicationQuit()
+    {
+        Debug.Log("Application Quitting...");
+        FirebaseManager.Instance.SendAnalyticsData(sessionID, highestLevelReached, levelAttempts);
+        EndSession();
     }
 }
