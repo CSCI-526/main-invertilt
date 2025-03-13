@@ -14,11 +14,11 @@ public class FlashingText : MonoBehaviour
     // Dictionary to store messages for each scene
     private readonly Dictionary<string, string> sceneMessages = new Dictionary<string, string>
     {
-        { "Level-1", "'G' for gravity. \n'A' & 'D' for spin." },
+        { "Level-1", "'G' for gravity \n'A' & 'D' for spin" },
         { "Level-2", "Navigate with wind!" },
-        { "Level-3", "MOTION on yellow sandpaper." },
-        { "Level-4", "Think before you move." },
-        { "Level-5", "Portals & Black hole." }
+        { "Level-3", "Motion on yellow sandpaper!" },
+        { "Level-4", "Think before you move!" },
+        { "Level-5", "Portals & Black hole!" }
     };
 
     void Start()
