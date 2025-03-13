@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement; // Add this
+using UnityEngine.SceneManagement;
 
 public class Ending : MonoBehaviour
 {
@@ -41,6 +41,9 @@ public class Ending : MonoBehaviour
                 break;
             case "Level-4":
                 level = 4;
+                break;
+            case "Level-5":
+                level = 5;
                 break;
         }
 
