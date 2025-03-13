@@ -29,6 +29,7 @@ public class Completed : MonoBehaviour
 
         if (IsLevelAvailable(nextLevel))
         {
+            GameAnalytics.Instance.LevelStarted(int.Parse(nextLevel.Replace("Level-", "")));
             SceneManager.LoadScene(nextLevel);
         }
         else
