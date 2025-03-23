@@ -45,6 +45,9 @@ public class Ending : MonoBehaviour
             case "Level-5":
                 level = 5;
                 break;
+            case "Level-6":
+                level = 6;
+                break;
         }
 
         Debug.Log("Level "+ level + " completed.");

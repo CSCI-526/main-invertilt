@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro; // For Text Mesh pro
+using TMPro;
+using UnityEngine.SceneManagement;
 
 public class ScenarioSpin : MonoBehaviour
 {
@@ -20,7 +21,28 @@ public class ScenarioSpin : MonoBehaviour
 
     void Start()
     {
+        int currentLevel = GetCurrentLevelNumber();
+
+        if (currentLevel == 6)
+        {
+            movesLeft = 17;
+        }
+        Debug.Log("Current Level: " + currentLevel + ", Moves Left: " + movesLeft);
         UpdateUI();
+    }
+
+    int GetCurrentLevelNumber()
+    {
+        string sceneName = SceneManager.GetActiveScene().name;
+        string levelNumberStr = sceneName.Replace("Level-", "");
+
+        int levelNumber;
+        if (int.TryParse(levelNumberStr, out levelNumber))
+        {
+            return levelNumber;
+        }
+
+        return 1;
     }
 
     void Update()
