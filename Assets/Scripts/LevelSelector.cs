@@ -41,6 +41,11 @@ public class LevelSelector : MonoBehaviour
             GameAnalytics.Instance.LevelStarted(5);
             SceneManager.LoadScene("Level-5");
         }
+        else if (level == 6)
+        {
+            GameAnalytics.Instance.LevelStarted(6);
+            SceneManager.LoadScene("Level-6");
+        }
     }
 
     void Update()
