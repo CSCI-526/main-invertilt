@@ -19,7 +19,7 @@ public class LevelSelector : MonoBehaviour
         if (level == 1)
         {
             GameAnalytics.Instance.LevelStarted(1);
-            SceneManager.LoadScene("Level-1");
+            SceneManager.LoadScene("Tut-1");
         }
         else if (level == 2)
         {
