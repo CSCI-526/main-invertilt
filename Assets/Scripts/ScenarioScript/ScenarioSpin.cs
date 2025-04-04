@@ -19,14 +19,14 @@ public class ScenarioSpin : MonoBehaviour
     // Track gravity flip state
     private bool isGravityFlipped = false;
 
+    private RestartGame restartScript;
+
+
     void Start()
     {
+        restartScript = FindObjectOfType<RestartGame>();
+        
         int currentLevel = GetCurrentLevelNumber();
-
-        if (currentLevel == 6)
-        {
-            movesLeft = 17;
-        }
         Debug.Log("Current Level: " + currentLevel + ", Moves Left: " + movesLeft);
         UpdateUI();
     }
@@ -47,6 +47,10 @@ public class ScenarioSpin : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.R) && restartScript != null)
+        {
+            restartScript.Restart();
+        }
         if (!canMove || movesLeft <= 0)
         {
             return;
@@ -105,6 +109,12 @@ public class ScenarioSpin : MonoBehaviour
         if (movesCounterText != null)
         {
             movesCounterText.text = "Moves Left: " + movesLeft;
+
+            if (movesLeft == 0)
+            {
+                movesCounterText.color = Color.red;
+                movesCounterText.fontStyle = FontStyles.Bold;
+            }
         }
     }
 
