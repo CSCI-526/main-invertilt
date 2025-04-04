@@ -20,7 +20,7 @@ public class FlashingText : MonoBehaviour
         {"Play-1", "Try Yourself"},
         {"Play-2", "Try Yourself"},
         {"Play-3", "Try Yourself"},
-        { "Level-1", "'G' for gravity \n'A' & 'D' for spin" },
+        { "Level-1", "Top left (?) for Hints. \nGood Luck!" },
         { "Level-2", "Navigate with wind!" },
         { "Level-3", "Motion on yellow sandpaper!" },
         { "Level-4", "Think before you move!" },
