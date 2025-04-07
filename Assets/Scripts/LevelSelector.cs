@@ -24,7 +24,7 @@ public class LevelSelector : MonoBehaviour
         else if (level == 2)
         {
             GameAnalytics.Instance.LevelStarted(2);
-            SceneManager.LoadScene("Level-2");
+            SceneManager.LoadScene("TutWind");
         }
         else if (level == 3)
         {

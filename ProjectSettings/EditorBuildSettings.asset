@@ -50,4 +50,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Play-3.unity
     guid: a60d0b66f3dae4b458765559ce35bc66
+  - enabled: 1
+    path: Assets/Scenes/TutWind.unity
+    guid: d30deee53062a41c695bf91e477ed18c
   m_configObjects: {}
