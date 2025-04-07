@@ -877,7 +877,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationDuration: 0.8
-  movesLeft: 5
+  movesLeft: 1000
   movesCounterText: {fileID: 0}
 --- !u!4 &533331534
 Transform:
