@@ -9,6 +9,9 @@ public class MainMenu : MonoBehaviour
     public void Playgame(){
         SceneManager.LoadSceneAsync("Levels");
     }
+    public void Playgame2(){
+        SceneManager.LoadSceneAsync("Tut-1");
+    }
     void Start()
     {
         
