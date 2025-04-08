@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -18,6 +19,16 @@ public class NextTut : MonoBehaviour
         { "TutPortal", "Level-5"}
     };
 
+    private HashSet<string> GameAnalyticsLoadedLevels = new HashSet<string>
+    {
+        "Level-1",
+        "Level-2",
+        "Level-3",
+        "Level-4",
+        "Level-5",
+        "Level-6"
+    };
+
     public void GoToNextScene()
     {
         Debug.Log("Clicked!"); // Log the click event
@@ -25,7 +36,9 @@ public class NextTut : MonoBehaviour
         if (sceneTransitions.ContainsKey(SceneManager.GetActiveScene().name))
         {
             string nextScene = sceneTransitions[SceneManager.GetActiveScene().name];
-            Debug.Log("Transitioning to: " + nextScene); // Log the transition
+            if (GameAnalyticsLoadedLevels.Contains(nextScene)) {
+                GameAnalytics.Instance.LevelStarted(int.Parse(nextScene.Replace("Level-", "")));
+            }
             SceneManager.LoadScene(nextScene);
         }
         else
