@@ -29,7 +29,7 @@ public class LevelSelector : MonoBehaviour
         else if (level == 3)
         {
             GameAnalytics.Instance.LevelStarted(3);
-            SceneManager.LoadScene("Level-3");
+            SceneManager.LoadScene("TutSandpaper");
         }
         else if (level == 4)
         {
