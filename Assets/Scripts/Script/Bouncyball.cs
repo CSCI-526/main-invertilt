@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class BouncyBall : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class BouncyBall : MonoBehaviour
 
     // Reference to the ScenarioSpin script
     public ScenarioSpin scenarioSpin;
+    public TMP_Text arrowText;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>(); // Get the Rigidbody2D component
@@ -25,6 +27,12 @@ public class BouncyBall : MonoBehaviour
         }
 
         originalScale = transform.localScale; // Save the original scale of the ball
+
+        // Set initial arrow
+        if (arrowText != null)
+        {
+            arrowText.text = "↓";
+        }
     }
 
     void Update()
@@ -42,6 +50,11 @@ public class BouncyBall : MonoBehaviour
 
                 // Reverse the ball's velocity instantly to reflect gravity change
                 rb.velocity = new Vector2(rb.velocity.x, -rb.velocity.y);
+                // 🔽 Update arrow
+                if (arrowText != null)
+                {
+                    arrowText.text = gravityReversed ? "↑" : "↓";
+                }
             }
         }
 

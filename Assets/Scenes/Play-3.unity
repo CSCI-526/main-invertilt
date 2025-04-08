@@ -265,6 +265,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 117600586628658443, guid: 3445b1f484f5e444cbf72131f3cfa29c, type: 3}
+      propertyPath: arrowText
+      value: 
+      objectReference: {fileID: 138860629}
+    - target: {fileID: 117600586628658443, guid: 3445b1f484f5e444cbf72131f3cfa29c, type: 3}
       propertyPath: shrinkRate
       value: 0.2
       objectReference: {fileID: 0}
@@ -341,6 +345,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3445b1f484f5e444cbf72131f3cfa29c, type: 3}
+--- !u!114 &138860629 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1889429672142812593, guid: 3445b1f484f5e444cbf72131f3cfa29c, type: 3}
+  m_PrefabInstance: {fileID: 138860628}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &250698220
 GameObject:
   m_ObjectHideFlags: 0
@@ -954,6 +969,8 @@ MonoBehaviour:
   rotationDuration: 0.8
   movesLeft: 1000
   movesCounterText: {fileID: 0}
+  infoButton: {fileID: 0}
+  infoButtonText: {fileID: 0}
 --- !u!4 &533331534
 Transform:
   m_ObjectHideFlags: 0
