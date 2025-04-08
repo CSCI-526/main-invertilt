@@ -27,7 +27,7 @@ public class NextTut : MonoBehaviour
         }
         else if (SceneManager.GetActiveScene().name == "Play-3")
         {
-            SceneManager.LoadScene("Level-1");
+            SceneManager.LoadScene("SampleScene");
         }
         else
         {

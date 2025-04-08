@@ -9,4 +9,9 @@ public class Back : MonoBehaviour
     {
         SceneManager.LoadScene("Levels");
     }
+
+    public void LoadBack2()
+    {
+        SceneManager.LoadScene("SampleScene");
+    }
 }
