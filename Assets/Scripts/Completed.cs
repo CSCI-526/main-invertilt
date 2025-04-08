@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -6,12 +7,23 @@ public class Completed : MonoBehaviour
 {
     public Button next;
 
+    private Dictionary<string, string> sceneTransitions = new Dictionary<string, string>
+    {
+        { "Level-1", "TutWind" },
+        { "Level-2", "TutSandpaper" },
+        { "Level-3", "TutPortal" },
+        { "Level-4", "Level-5" },
+        { "Level-5", "Level-6" },
+    };
+
+
+
     private void Start()
     {
         string currentLevel = PlayerPrefs.GetString("CurrentLevel", "Level-1");
         string nextLevel = GetNextLevelName(currentLevel);
 
-        if (!IsLevelAvailable(nextLevel))
+        if (!IsLevelAvailable(nextLevel) && !IsTutAvailable(nextLevel))
         {
             next.gameObject.SetActive(false);
         }
@@ -31,6 +43,9 @@ public class Completed : MonoBehaviour
         {
             GameAnalytics.Instance.LevelStarted(int.Parse(nextLevel.Replace("Level-", "")));
             SceneManager.LoadScene(nextLevel);
+        } else if (IsTutAvailable(nextLevel)) {
+            Debug.Log("Loading tutorial: " + nextLevel);
+            SceneManager.LoadScene(nextLevel);
         }
         else
         {
@@ -41,23 +56,33 @@ public class Completed : MonoBehaviour
 
     private string GetNextLevelName(string currentLevel)
     {
-        int levelNumber;
-        if (int.TryParse(currentLevel.Replace("Level-", ""), out levelNumber))
+        // int levelNumber;
+        // if (int.TryParse(currentLevel.Replace("Level-", ""), out levelNumber))
+        // {
+        //     return "Level-" + (levelNumber + 1);
+        // }
+        if (sceneTransitions.ContainsKey(currentLevel))
         {
-            return "Level-" + (levelNumber + 1);
+            return sceneTransitions[currentLevel];
         }
         return "";
     }
 
     private bool IsLevelAvailable(string levelName)
     {
-        for (int i = 0; i < SceneManager.sceneCountInBuildSettings; i++)
-        {
-            if (SceneUtility.GetScenePathByBuildIndex(i).Contains(levelName))
-            {
-                return true;
-            }
-        }
-        return false;
+        // for (int i = 0; i < SceneManager.sceneCountInBuildSettings; i++)
+        // {
+        //     if (SceneUtility.GetScenePathByBuildIndex(i).Contains(levelName))
+        //     {
+        //         return true;
+        //     }
+        // }
+        // return false;
+        // return true iff the next is beginning with "Level-"
+        return levelName.StartsWith("Level-");
+    }
+
+    private bool IsTutAvailable(string levelName) {
+        return levelName.StartsWith("Tut");
     }
 }
