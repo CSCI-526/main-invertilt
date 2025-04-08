@@ -15,6 +15,7 @@ public class NextTut : MonoBehaviour
         { "Play-3", "Level-1" },
         { "TutWind", "Level-2" },
         { "TutSandpaper", "Level-3" },
+        { "TutPortal", "Level-5"}
     };
 
     public void GoToNextScene()
