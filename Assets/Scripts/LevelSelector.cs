@@ -24,12 +24,12 @@ public class LevelSelector : MonoBehaviour
         else if (level == 2)
         {
             GameAnalytics.Instance.LevelStarted(2);
-            SceneManager.LoadScene("Level-2");
+            SceneManager.LoadScene("TutWind");
         }
         else if (level == 3)
         {
             GameAnalytics.Instance.LevelStarted(3);
-            SceneManager.LoadScene("Level-3");
+            SceneManager.LoadScene("TutSandpaper");
         }
         else if (level == 4)
         {
@@ -39,7 +39,7 @@ public class LevelSelector : MonoBehaviour
         else if (level == 5)
         {
             GameAnalytics.Instance.LevelStarted(5);
-            SceneManager.LoadScene("Level-5");
+            SceneManager.LoadScene("TutPortal");
         }
         else if (level == 6)
         {
