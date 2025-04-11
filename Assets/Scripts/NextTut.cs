@@ -13,7 +13,7 @@ public class NextTut : MonoBehaviour
         { "Tut-2", "Play-2" },
         { "Play-2", "Tut-3" },
         { "Tut-3", "Play-3" },
-        { "Play-3", "Level-1" },
+        { "Play-3", "SampleScene" },
         { "TutWind", "Level-2" },
         { "TutSandpaper", "Level-4" },
         { "TutPortal", "Level-7"}
