@@ -10,10 +10,12 @@ public class Completed : MonoBehaviour
     private Dictionary<string, string> sceneTransitions = new Dictionary<string, string>
     {
         { "Level-1", "TutWind" },
-        { "Level-2", "TutSandpaper" },
-        { "Level-3", "TutPortal" },
+        { "Level-2", "Level-3" },
+        { "Level-3", "TutSandpaper" },
         { "Level-4", "Level-5" },
         { "Level-5", "Level-6" },
+        { "Level-6", "TutPortal" },
+        { "Level-7", "Level-8" },
     };
 
 
@@ -39,6 +41,20 @@ public class Completed : MonoBehaviour
         string currentLevel = PlayerPrefs.GetString("CurrentLevel", "Level-1");
         string nextLevel = GetNextLevelName(currentLevel);
 
+
+
+        if (currentLevel == "Level-4")
+        {
+            nextLevel = "Level-5";
+            next.gameObject.SetActive(true);
+        }
+        else
+        {
+            if (!IsLevelAvailable(nextLevel) && !IsTutAvailable(nextLevel))
+            {
+                next.gameObject.SetActive(false);
+            }
+        }
         if (IsLevelAvailable(nextLevel))
         {
             GameAnalytics.Instance.LevelStarted(int.Parse(nextLevel.Replace("Level-", "")));

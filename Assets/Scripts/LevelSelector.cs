@@ -29,22 +29,32 @@ public class LevelSelector : MonoBehaviour
         else if (level == 3)
         {
             GameAnalytics.Instance.LevelStarted(3);
-            SceneManager.LoadScene("TutSandpaper");
+            SceneManager.LoadScene("Level-3");
         }
         else if (level == 4)
         {
             GameAnalytics.Instance.LevelStarted(4);
-            SceneManager.LoadScene("Level-4");
+            SceneManager.LoadScene("TutSandpaper");
         }
         else if (level == 5)
         {
             GameAnalytics.Instance.LevelStarted(5);
-            SceneManager.LoadScene("TutPortal");
+            SceneManager.LoadScene("Level-5");
         }
         else if (level == 6)
         {
             GameAnalytics.Instance.LevelStarted(6);
             SceneManager.LoadScene("Level-6");
+        }
+        else if (level == 7)
+        {
+            GameAnalytics.Instance.LevelStarted(7);
+            SceneManager.LoadScene("TutPortal");
+        }
+        else if (level == 8)
+        {
+            GameAnalytics.Instance.LevelStarted(8);
+            SceneManager.LoadScene("Level-8");
         }
     }
 
