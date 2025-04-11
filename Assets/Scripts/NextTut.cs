@@ -15,8 +15,8 @@ public class NextTut : MonoBehaviour
         { "Tut-3", "Play-3" },
         { "Play-3", "Level-1" },
         { "TutWind", "Level-2" },
-        { "TutSandpaper", "Level-3" },
-        { "TutPortal", "Level-5"}
+        { "TutSandpaper", "Level-4" },
+        { "TutPortal", "Level-7"}
     };
 
     private HashSet<string> GameAnalyticsLoadedLevels = new HashSet<string>
@@ -26,7 +26,9 @@ public class NextTut : MonoBehaviour
         "Level-3",
         "Level-4",
         "Level-5",
-        "Level-6"
+        "Level-6",
+        "Level-7",
+        "Level-8"
     };
 
     public void GoToNextScene()
