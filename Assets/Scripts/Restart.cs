@@ -26,6 +26,12 @@ public class RestartGame : MonoBehaviour
             case "Level-6":
                 GameAnalytics.Instance.LevelStarted(6);
                 break;
+            case "Level-7":
+                GameAnalytics.Instance.LevelStarted(7);
+                break;
+            case "Level-8":
+                GameAnalytics.Instance.LevelStarted(8);
+                break;
         }
     }
 }
