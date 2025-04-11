@@ -22,9 +22,10 @@ public class FlashingText : MonoBehaviour
         {"Play-3", "Try Yourself"},
         { "Level-1", "Top left (?) for Hints. \nGood Luck!" },
         { "Level-2", "Navigate with wind!" },
-        { "Level-3", "Motion on yellow sandpaper!" },
-        { "Level-4", "Think before you move!" },
-        { "Level-5", "Portals & Black hole!" }
+        { "Level-3", "Use the Sandpaper to your advantage" },
+        { "Level-4", "Beware of the red spikes!" },
+        { "Level-5", "Use the portals and avoid Black hole" },
+        { "Level-6", "Good Luck!"}
     };
 
     void Start()
