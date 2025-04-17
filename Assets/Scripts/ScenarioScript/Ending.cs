@@ -26,9 +26,9 @@ public class Ending : MonoBehaviour
         string currentLevel = SceneManager.GetActiveScene().name;
         PlayerPrefs.SetString("CurrentLevel", currentLevel);
         PlayerPrefs.Save();
-        
+
         levelName = SceneManager.GetActiveScene().name;
-        switch(levelName)
+        switch (levelName)
         {
             case "Level-1":
                 level = 1;
@@ -56,8 +56,15 @@ public class Ending : MonoBehaviour
                 break;
         }
 
-        Debug.Log("Level "+ level + " completed.");
+        Debug.Log("Level " + level + " completed.");
         GameAnalytics.Instance.LevelCompleted(level);
-        SceneManager.LoadScene("Completed");
+        if (level == 8)
+        {
+            SceneManager.LoadScene("Final");
+        }
+        else
+        {
+            SceneManager.LoadScene("Completed");
+        }
     }
 }
