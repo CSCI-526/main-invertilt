@@ -7,7 +7,9 @@ Shader "Custom/BorderShader"
     }
     SubShader
     {
-        Tags { "RenderType"="Opaque" }
+        // Tags { "RenderType"="Opaque" }
+        Tags { "Queue" = "Transparent" "RenderType" = "Transparent" }
+    ZWrite Off
         Blend SrcAlpha OneMinusSrcAlpha
         Pass
         {
