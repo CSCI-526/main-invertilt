@@ -289,6 +289,10 @@ PrefabInstance:
       propertyPath: shrinkRate
       value: 0.2
       objectReference: {fileID: 0}
+    - target: {fileID: 2916859233977351554, guid: 3445b1f484f5e444cbf72131f3cfa29c, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3493724182558834143, guid: 3445b1f484f5e444cbf72131f3cfa29c, type: 3}
       propertyPath: m_SortingOrder
       value: 1
