@@ -3838,10 +3838,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '"Spikes" = instant death
-
-    Use "Windbox" to guide the ball and "Sandpaper"
-    to shrink when things get tight!'
+  m_text: Click 'A' once and 'G' next to escape the deadly "Spikes"!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
