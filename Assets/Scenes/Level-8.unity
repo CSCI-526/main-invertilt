@@ -5535,8 +5535,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Don\u2019t get caught in the \"Black Hole\u2019s radius\"\nUse \"Blue
-    Portals\" to access unreachable areas"
+  m_text: "Isn't this too hard ? \nIt was meant to be!\nClick 'G' mutiple times to
+    reach the first portal"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -13260,7 +13260,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 2.5
+      scalar: 3.5
       minScalar: 1
       maxCurve:
         serializedVersion: 2
