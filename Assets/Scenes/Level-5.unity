@@ -549,6 +549,14 @@ PrefabInstance:
       propertyPath: shrinkRate
       value: 0.2
       objectReference: {fileID: 0}
+    - target: {fileID: 2916859233977351554, guid: 3445b1f484f5e444cbf72131f3cfa29c, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3493724182558834143, guid: 3445b1f484f5e444cbf72131f3cfa29c, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6219150489293609915, guid: 3445b1f484f5e444cbf72131f3cfa29c, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -1229,7 +1237,7 @@ Transform:
   m_GameObject: {fileID: 717495385}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -15.7484, y: -9.3988, z: 0}
+  m_LocalPosition: {x: -16.01, y: -9.3988, z: 0}
   m_LocalScale: {x: 2.0202, y: 1.83375, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
